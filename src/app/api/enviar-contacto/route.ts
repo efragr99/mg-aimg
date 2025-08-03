@@ -49,7 +49,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ status: 'ok', data })
   } catch (err) {
-    console.error('❌ ERROR:', err)
     console.error('❌ Error enviando correo:', err)
     return NextResponse.json({ status: 'error', message: 'Fallo' }, { status: 500 })
   }
