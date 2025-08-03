@@ -44,7 +44,7 @@ export async function POST(request: Request) {
       from: 'onboarding@resend.dev',
       to: ['astromind66@gmail.com'],
       subject: 'Nuevo contacto desde la app MG-AI',
-      html: contenido
+      html: contenidoHTML
     })
 
     return NextResponse.json({ status: 'ok', data })
