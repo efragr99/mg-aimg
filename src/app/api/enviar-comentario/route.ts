@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     `
 
     await resend.emails.send({
-      from: 'MG-AI <no-reply@mg-ai.app>',
+      from: 'onboarding@resend.dev',
       to: ['astromind66@gmail.com'],
       subject: '📨 Comentario o error reportado desde MG-AI',
       html: contenidoHTML
