@@ -16,14 +16,14 @@ export async function POST(request: Request) {
       <pre>${JSON.stringify(registro, null, 2)}</pre>
     `
     const mensaje = body.mensaje || ''
-    const nombre = registro.nombre || 'No especificado'
-    const apellido = registro.apellido || ''
-    const celular = registro.celular || 'No especificado'
-    const sintomas = (registro.sintomas || []).join(', ')
-    const antecedentes = (registro.antecedentes || []).join(', ')
-    const diagnosticos = (registro.diagnosticos || []).join(', ')
-    const fecha_nacimiento = registro.fecha_nacimiento || 'No especificado'
-    const sexo = registro.sexo || 'No especificado'
+    const nombre = registro?.nombre || 'No especificado'
+    const apellido = registro?.apellido || ''
+    const celular = registro?.celular || 'No especificado'
+    const sintomas = (registro?.sintomas || []).join(', ')
+    const antecedentes = (registro?.antecedentes || []).join(', ')
+    const diagnosticos = (registro?.diagnosticos || []).join(', ')
+    const fecha_nacimiento = registro?.fecha_nacimiento || 'No especificado'
+    const sexo = registro?.sexo || 'No especificado'
 
     const contenidoHTML = `
       <h2>📩 Usuario petición de contactar terapeuta</h2>
