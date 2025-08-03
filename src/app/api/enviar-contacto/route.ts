@@ -51,6 +51,6 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error('❌ ERROR:', err)
     console.error('❌ Error enviando correo:', err)
-    return NextResponse.json({ status: 'error', message: (err as error).message }, { status: 500 })
+    return NextResponse.json({ status: 'error', message: 'Fallo' }, { status: 500 })
   }
 }
