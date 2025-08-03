@@ -49,7 +49,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ status: 'ok', data })
   } catch (err) {
+    console.error('❌ ERROR:', err)
     console.error('❌ Error enviando correo:', err)
-    return NextResponse.json({ status: 'error', message: 'Fallo en el servidor' }, { status: 500 })
+    return NextResponse.json({ status: 'error', message: (err as error).message }, { status: 500 })
   }
 }
