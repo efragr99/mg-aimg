@@ -42,7 +42,7 @@ export async function POST(request: Request) {
   
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: ['astromind66@gmail.com'],
+      to: ['efragr99@gmail.com'],
       subject: 'Nuevo contacto desde la app MG-AI',
       html: contenidoHTML
     })
