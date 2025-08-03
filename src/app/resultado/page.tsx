@@ -214,7 +214,16 @@ if (
         {respuesta.tipo === 'opciones' && renderOpciones()}
 
         <div className="flex justify-center gap-4 pt-4">
-          <button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-xl shadow-md transition">
+          <button 
+            onClick={() => {
+               const respuesta = localStorage.getItem('respuestaIA') || localStorage.getItem('conflictoSeleccionado')
+                if (respuesta) {
+                localStorage.setItem('respuesta_respaldo', respuesta) // backup
+                localStorage.setItem('volver_con_conflicto', '1')
+              }
+              router.push('/trabajando')
+            }}
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-xl shadow-md transition">
             🌱 {t.button_trabajar}
           </button>
           <button 
